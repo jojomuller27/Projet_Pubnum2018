@@ -10,6 +10,8 @@ Pour accéder à la publication vous devez :
 
 - Ouvrir le fichier "accueil.html"
 
+- Lire les instructions et démarrer!
+
 ### A propos du code:
 
 Ce travail à été réalisé en HTML, CSS, JavaScript et JSON dans le cadre du cours universitaire "Publication numérique" donné par Isaac Pante au semestre d'automne 2018. 
