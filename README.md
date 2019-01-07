@@ -5,7 +5,7 @@ Pour accéder à la publication vous devez :
 
 - Télécharger le dossier github
 
-- Ouvrir le fichier "accueil.html
+- Ouvrir le fichier "accueil.html"
 
 A propos du code:
 
