@@ -1,0 +1,225 @@
+var catalogue = [
+    {
+        "Artiste": "Pierre Paul Rubens",
+        "Titre": "Portrait de son fils",
+        "Date": "1620",
+        "IndiceDate": "XVII",
+        "Lieu": "Pays Bas",
+        "IndiceLieu": "Flamand",
+        "Image": "desktop/ID1.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+       },   
+       {
+        "Artiste": "Albrecht Durer",
+        "Titre": "Portrait de sa mère",
+        "Date": "1514",
+        "IndiceDate": "XVI",
+        "Lieu": "Bavière",
+        "IndiceLieu": "Allemagne",
+        "Image": "desktop/ID2.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Bartolome Esteban Murillo",
+        "Titre": "Les enfants jouant aux dés",
+        "Date": "1670-75",
+        "IndiceDate": "XVII",
+        "Lieu": "Séville",
+        "IndiceLieu": "Espagne",
+        "Image": "desktop/ID3.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Pieter de Hooch",
+        "Titre": "La peleuse de pommes",
+        "Date": "1663",
+        "IndiceDate": "XVII",
+        "Lieu": "Pays Bas",
+        "IndiceLieu": "Flamand",
+        "Image": "desktop/ID4.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Melozzo da Forli",
+        "Titre": "L'ange",
+        "Date": "1480",
+        "IndiceDate": "XV",
+        "Lieu": "Forli",
+        "IndiceLieu": "Italie",
+        "Image": "desktop/ID5.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Hans Memling",
+        "Titre": "L'ange",
+        "Date": "1490",
+        "IndiceDate": "XV",
+        "Lieu": "Bruges",
+        "IndiceLieu": "Belgique",
+        "Image": "desktop/ID6.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Guido Reni",
+        "Titre": "Le christ couroné d'épines",
+        "Date": "1639-1640",
+        "IndiceDate": "XVII",
+        "Lieu": "Bologne",
+        "IndiceLieu": "Italie",
+        "Image": "desktop/ID7.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Le maitre Toscano",
+        "Titre": "Le christ en croix",
+        "Date": "1175-1225",
+        "IndiceDate": "XII",
+        "Lieu": "Toscane",
+        "IndiceLieu": "Italie",
+        "Image": "desktop/ID8.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Albrecht Durer",
+        "Titre": "Le lièvre",
+        "Date": "1502",
+        "IndiceDate": "XI",
+        "Lieu": "Bavière",
+        "IndiceLieu": "Allemagne",
+        "Image": "desktop/ID9.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Rembrandt  van Rijn",
+        "Titre": "L'éléphant",
+        "Date": "1637",
+        "IndiceDate": "XVII",
+        "Lieu": "Amsterdam",
+        "IndiceLieu": "Pays Bas",
+        "Image": "desktop/ID10.jpg",
+        "Note": "",
+        "Orientation":"landscape"
+     },
+     {
+        "Artiste": "Pablo Picasso",
+        "Titre": "La poule et les poussins",
+        "Date": "1941-42",
+        "IndiceDate": "XX",
+        "Lieu": "France",
+        "IndiceLieu": "Edition de Buffon",
+        "Image": "desktop/ID11.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Pablo Picasso",
+        "Titre": "La poule",
+        "Date": "1938",
+        "IndiceDate": "XX",
+        "Lieu": "Paris",
+        "IndiceLieu": "France",
+        "Image": "desktop/ID12.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Théodore Géricault",
+        "Titre": "Course de chevaux à Epsom",
+        "Date": "1821",
+        "IndiceDate": "XIX",
+        "Lieu": "Londres",
+        "IndiceLieu": "Angleterre",
+        "Image": "desktop/ID13.jpg",
+        "Note": "",
+        "Orientation":"landscape"
+     },
+     {
+        "Artiste": "Eadweard Muybridge",
+        "Titre": "Cheval au galop",
+        "Date": "1872",
+        "IndiceDate": "XIX",
+        "Lieu": "Londres",
+        "IndiceLieu": "Angleterre",
+        "Image": "desktop/ID14.jpg",
+        "Note": "",
+        "Orientation":"landscape"
+     },
+     {
+        "Artiste": "Les frères Limbourg ",
+        "Titre": "Pages du Livre d'heures du duc de Berry",
+        "Date": "1410",
+        "IndiceDate": "XV",
+        "Lieu": "Pays Bas",
+        "IndiceLieu": "Flamand",
+        "Image": "desktop/ID15.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Antonio Pisanello ",
+        "Titre": "Croquis de singes",
+        "Date": "1430",
+        "IndiceDate": "XV",
+        "Lieu": "Rome",
+        "IndiceLieu": "Italie",
+        "Image": "desktop/ID16.jpg",
+        "Note": "",
+        "Orientation":"landscape"
+     },
+     {
+        "Artiste": "Donatello ",
+        "Titre": "Saint Georges",
+        "Date": "1415-16",
+        "IndiceDate": "XV",
+        "Lieu": "Florence",
+        "IndiceLieu": "Italie",
+        "Image": "desktop/ID17.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Donatello ",
+        "Titre": "Le festin de Herodes",
+        "Date": "1423-1427",
+        "IndiceDate": "XV",
+        "Lieu": "Florence",
+        "IndiceLieu": "Italie",
+        "Image": "desktop/ID18.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Claus Sluter ",
+        "Titre": "La prophétie de Daniel et Isaïe",
+        "Date": "1396-1404",
+        "IndiceDate": "XIV-XV",
+        "Lieu": "Bourgogne",
+        "IndiceLieu": "France",
+        "Image": "desktop/ID19.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+     {
+        "Artiste": "Jan Van Eyck ",
+        "Titre": "Le mariage Arnolfini",
+        "Date": "1434",
+        "IndiceDate": "XV",
+        "Lieu": "Bavière",
+        "IndiceLieu": "Allemagne",
+        "Image": "desktop/ID20.jpg",
+        "Note": "",
+        "Orientation":"portrait"
+     },
+            ]
+
+
+
