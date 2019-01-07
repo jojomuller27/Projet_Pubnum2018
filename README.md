@@ -14,7 +14,7 @@ Pour accéder à la publication vous devez :
 
 ### A propos du code:
 
-Ce travail à été réalisé en HTML, CSS, JavaScript et JSON dans le cadre du cours universitaire "Publication numérique" donné par Isaac Pante au semestre d'automne 2018. 
+Ce travail q été réalisé en HTML, CSS, JavaScript et JSON dans le cadre du cours universitaire "Publication numérique" donné par Isaac Pante au semestre d'automne 2018. 
 
 ### Licence:
 
