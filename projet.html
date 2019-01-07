@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+                .bleu{
+                    background-color:blue;
+                    color: white;
+                
+                }
+                .rouge{
+                    background-color: red;
+                    color: white;
+                }   
+                .vert{
+                    background-color: green;
+                    color: white;
+                }  
+                .cache{
+                    display:none;
+                }
+                
+                .valider {
+                    background-color:blue;
+                    color:white;
+                    border-radius: 70px;
+                  }
+
+                .indice{
+                    background-color:blue;
+                    color:white;
+                    border-radius: 70px;
+                }
+
+                .portrait{
+                    height: 400px;
+                }
+
+                .landscape{
+                    width: 400px;
+                }
+
+                #cadre{
+                    width:400px;
+                    height:405px;
+                    display:table-cell;
+                    vertical-align: middle;
+                }
+
+                @media handheld {
+                    #btArtiste, #btTitre, #btDate, #btLieu , #btIndice {
+                    font-size:1rem;
+                    }                   
+
+                }
+                    
+                @media screen {
+                    #btArtiste, #btTitre, #btDate, #btLieu, #btValider, #btIndice {
+                    font-size:80%;
+                    }
+                }
+
+                   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" language="javascript" src="catalogue.json"></script>
+    <title>Document</title>
+</head>
+<body>
+ 
+<h3><center>Lecture d'œuvres</center></h3>
+<center><input type="button" id="btIndice" value="Indices" class="indice">
+<textarea id="txtAreaNote" class="cache">
+
+</textarea>
+<div>
+
+    <div id="cadre">
+            <img id= "imageOeuvre" alt="Miniature"/></a>     
+    </div>
+
+    <div>
+            <input type="button" id="btArtiste" value="Artiste" class="bleu" onclick="fnChangeCouleur(this);">
+            <input type="button" id="btTitre" value="Titre" class="bleu" onclick="fnChangeCouleur(this);">
+            <input type="button" id="btDate" value="Date" class="bleu" onclick="fnChangeCouleur(this);">
+            <input type="button" id="btLieu" value="Lieu" class="bleu" onclick="fnChangeCouleur(this);">
+    </br>   
+    </br>        
+
+            <input type="button" id="btValider" value="Valider" class="valider" onclick="verifieReponse();">
+        </center> 
+    </div>
+   
+        
+        <script>        
+       
+        //  récupérer les tons titre,dat, Lieu et artise
+        let btArtiste= document.getElementById("btArtiste");
+        let btTitre= document.getElementById("btTitre");
+        let btDate= document.getElementById("btDate");
+        let btLieu= document.getElementById("btLieu");
+        let btIndice= document.getElementById("btIndice");
+        let btValider= document.getElementById("btValider");
+        let txtAreaNote= document.getElementById("txtAreaNote");
+        let imageOeuvre = document.getElementById("imageOeuvre");
+        let pageQuestion=true;
+        let click = 0;
+        let oeuvres=[];
+            //création de constante
+         const TITRE_BT_ARTISTE=btArtiste.value;
+         const TITRE_BT_TITRE=btTitre.value;
+        const TITRE_BT_DATE=btDate.value;
+         const TITRE_BT_Lieu=btLieu.value;
+        
+
+        
+        
+        // couleur des boutons
+        function fnChangeCouleur (btn){
+            if(btn.className=="bleu"){
+                btn.className="rouge";
+            }
+            else if (btn.className=="rouge"){
+                btn.className="vert";
+            }
+            else{
+                btn.className="rouge";
+            }
+        };
+
+        //réinitialiser
+
+        function init()
+        {
+            click=0;
+        //random
+            tirage = Math.floor(Math.random() * catalogue.length);  
+        // récupérer les données du JSON relativement au tirage 
+            oeuvres["Artiste"] = catalogue[tirage].Artiste;
+            oeuvres["Titre"] = catalogue[tirage].Titre;
+            oeuvres["Date"] = catalogue[tirage].Date;
+            oeuvres["IndiceDate"] = catalogue[tirage].IndiceDate;
+            oeuvres["Lieu"] = catalogue[tirage].Lieu;
+            oeuvres["IndiceLieu"] = catalogue[tirage].IndiceLieu;
+            oeuvres["Image"] = catalogue[tirage].Image;
+            oeuvres["Note"] = catalogue[tirage].Note;
+            oeuvres["Orientation"] = catalogue[tirage].Orientation;
+        //changer la classe suivant portrait ou landscape
+            imageOeuvre.className = catalogue[tirage].Orientation;
+
+            btArtiste.className="bleu";
+            btTitre.className="bleu";
+            btLieu.className="bleu";
+            btDate.className="bleu";
+
+            btArtiste.value=TITRE_BT_ARTISTE;
+            btTitre.value=TITRE_BT_TITRE;
+            btLieu.value=TITRE_BT_Lieu;
+            btDate.value=TITRE_BT_DATE;
+
+            btValider.value="Valider";
+            imageOeuvre.src=oeuvres["Image"];
+            //passage d'une page à l'autre
+        }
+        
+        function verifieReponse (){
+           // document.getElementById("#txtAreaNote").style.display = "inline";
+            if(pageQuestion)
+            {
+                if (btLieu.className!="bleu"&btDate.className!="bleu"&btTitre.className!="bleu"&btArtiste.className!="bleu"){
+                    txtAreaNote.classList.toggle("cache");
+                    btIndice.classList.toggle("cache");
+                    btArtiste.value=oeuvres["Artiste"] ;
+                    btTitre.value = oeuvres["Titre"];
+                    btLieu.value= oeuvres["Lieu"] ;
+                    btDate.value=oeuvres["Date"] 
+                    btValider.value="Suivant";
+                    pageQuestion=false;
+                }
+            }
+            else{
+                click=0;
+                txtAreaNote.classList.toggle("cache");
+                btIndice.classList.toggle("cache");
+                init();
+
+              
+                pageQuestion=true;
+            }
+              
+          }    
+         
+                    
+          
+         
+          //function bouton indice
+          btIndice.addEventListener("click", function(){
+            click++;
+              if (click==1)
+              {
+                document.getElementById("btLieu").value = oeuvres["IndiceLieu"]}
+                  else if (click==2){
+                      document.getElementById("btDate").value = oeuvres["IndiceDate"];
+                      
+                  }
+          })
+        // appelle de la fonction init
+          init();
+  
+         
+      
+    </script>
+    </div>
+</body>
+</html>
