@@ -20,6 +20,7 @@ Pour accéder à la publication vous devez :
 Cette publication s'inspire des cartes que nous utilisions pour mémoriser le vocabulaire. Le mot en langue étrangère était inscrit sur une face et l'autre nous fournissait sa traduction.
 
 ![alt tag](https://github.com/jojomuller27/Projet_Pubnum2018/blob/master/Recto.png)
+
 Il nous incombait donc d'être honnêtes envers nous même quant à notre niveau de connaissance sur la matière testée.
  
 De la même manière, l'interface présente à l'utilisateur une œuvre choisie au hasard dans la base de données . 
