@@ -41,7 +41,7 @@ Pour continuer à réviser, il suffit de cliquer sur "suivant".
  
 ### A propos du code:
 
-Ce travail q été réalisé en HTML, CSS, JavaScript et JSON dans le cadre du cours universitaire "Publication numérique" donné par Isaac Pante au semestre d'automne 2018. 
+Ce travail a été réalisé en HTML, CSS, JavaScript et JSON dans le cadre du cours universitaire "Publication numérique" donné par Isaac Pante au semestre d'automne 2018. 
 
 ### Licence:
 
